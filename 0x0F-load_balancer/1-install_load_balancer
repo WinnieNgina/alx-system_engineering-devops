@@ -6,6 +6,7 @@ frontend haproxy_balancer
     bind *:80
     mode http
     default_backend webservers
+
 backend webservers
     balance roundrobin
     server 225838-web-01 52.91.168.104:80 check
