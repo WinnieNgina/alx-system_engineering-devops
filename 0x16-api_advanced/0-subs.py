@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''Returns number of subscibers in a subreddit'''
 import requests
-import sys
 
 
 def number_of_subscribers(subreddit):
