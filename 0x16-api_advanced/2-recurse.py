@@ -14,7 +14,7 @@ def recurse(subreddit, hot_list=[], after_value=None):
         for post in posts:
             title = post['data']['title']
             hot_list.append(title)
-            after_value = data['data']['after']
+        after_value = data['data']['after']
         if after_value:
             return recurse(subreddit, hot_list, after_value)
         else:
