@@ -12,7 +12,7 @@ def top_ten(subreddit):
         data = response.json()
         posts = (data['data']['children'])
         for post in posts:
-            title = title = post['data']['title']
+            title = post['data']['title']
             print(title)
     else:
         print('None')
