@@ -28,8 +28,8 @@ def count_words(subreddit, word_list, after_value=None, word_counts=None):
         after_value = data['data']['after']
         if after_value:
             count_words(subreddit, word_list, after_value, word_counts)
-    if not after_value:  # When there are no more pages to fetch
-        sorted_counts = sorted(
-            word_counts.items(), key=lambda x: (-x[1], x[0]))
-        for word, count in sorted_counts:
-            print(f"{word}: {count}")
+        else:
+            sorted_counts = sorted(
+                word_counts.items(), key=lambda x: (-x[1], x[0]))
+            for word, count in sorted_counts:
+                print(f"{word}: {count}")
